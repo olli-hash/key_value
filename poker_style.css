@@ -1,0 +1,39 @@
+
+
+.player_action input {
+    background-color: red;
+    color: white;
+    font-size: 300%;
+    padding: 12px;
+    margin:0px;
+    border:3px solid white;
+    
+    box-shadow: 0px;
+}
+
+.player_action input:hover {
+    box-shadow: 0px;
+
+    width: 250px;
+    
+}
+
+.poker_situation label {
+    display: inline-block;
+    width: 150px;
+    
+}
+
+.poker_situation input:hover {
+    box-shadow: inset 1px 1px 5px 5px white;
+    
+}
+
+
+.poker_situation input {
+    display: inline-block;
+    width: 200px;
+    
+}
+
+
