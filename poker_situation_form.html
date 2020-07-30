@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>hi poker_situation project</title>
 
-<link rel="stylesheet" href="poker_style.css"> 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<link rel="stylesheet" href="poker_style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script type = "text/javascript"
     src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
 </script>
@@ -21,51 +21,58 @@
                 result[pair[0]] = pair[1]
             }
             var output = document.getElementById('output')
-            output.innerHTML = 'Hello ' + result.name + ' your email is ' + result.email    
+            output.innerHTML = 'Hello ' + result.name + ' your email is ' + result.email
         })
     })
-        
+
 </script>
 
 </head>
 <body>
 
 <form action='#' id="my_form" class="poker_situation w3-form">
-<label for="name">Name: </label>
-<input type="text" name="name" value="Player1"><br>
 
-<label for="stacksize">Stack (in BBs): </label>
-<input type="text" name="stacksize" value="50"><br>
+    <div class="player_cards">
+        <img>
+        <img>
+    </div>
 
-<!--<label for="email">Email: </label>
-<input type="text" name="email">-->
+    <label for="name">Name: </label>
+    <input type="text" name="name" value="Player1">
 
-<label for="phase">Phase: </label>
-<input type="text" name="phase" value="preflop"><br>   <!--"preflop", "flop", "turn", "river"-->
-
-<label for="action_abstract">Preceding Action: </label>
-<input type="text" name="action_abstract" value="none"><br>  <!--"none", "m", "l", "xl", "allin"-->
-
-
-<label for="amount_to_call">Amount to call (in BBs): </label>
-<input type="text" name="amount_to_call" value="1"><br>
-
-<label for="potsize">Potsize (in BBs): </label>
-<input type="text" name="potsize" value="1.5"><br>
+    <label for="position">Position: </label>
+    <input type="text" name="position" value="3">
+    of:
+    <input type="text" name="number_of_players" value="3"><br>
 
 
-<label for="position">Position: </label>
-<input type="text" name="position" value="3">
 
-of:
-<input type="text" name="number_of_players" value="3"><br>
+    <!--<label for="email">Email: </label>
+    <input type="text" name="email">-->
 
-<div class="player_action">
-<input type="button" name="fold_button" value="FOLD"><input type="button" name="check_button" value="CHECK"><input type="button" name="call_button" value="CALL"><input type="button" name="raise_button" value="RAISE..."><input type="button" name="allin_button" value="ALLIN">
-</div>
+    <label for="phase">Phase: </label>
+    <input type="text" name="phase" value="preflop"><br>   <!--"preflop", "flop", "turn", "river"-->
+
+    <label for="action_abstract">Preceding Action: </label>
+    <input type="text" name="action_abstract" value="none"><br>  <!--"none", "m", "l", "xl", "allin"-->
 
 
-<!--<input type="button" id="my_button" class="w3-button" value="send">-->
+    <label for="amount_to_call">Amount to call (in BBs): </label>
+    <input type="text" name="amount_to_call" value="1"><br>
+
+    <label for="potsize">Potsize (in BBs): </label>
+    <input type="text" name="potsize" value="1.5"><br>
+
+    <label for="stacksize">Stack (in BBs): </label>
+    <input type="text" name="stacksize" value="50"><br>
+
+
+    <div class="player_action">
+    <input type="button" name="fold_button" value="FOLD"><input type="button" name="check_button" value="CHECK"><input type="button" name="call_button" value="CALL"><input type="button" name="raise_button" value="RAISE..."><input type="button" name="allin_button" value="ALLIN">
+    </div>
+
+
+    <!--<input type="button" id="my_button" class="w3-button" value="send">-->
 
 </form>
 
