@@ -15,7 +15,7 @@
 
 
         $('input[name=number_of_players]').click(function() {
-            
+
 
         })
 
@@ -41,45 +41,45 @@
 </head>
 <body>
 
-<form action='#' id="my_form" class="poker_situation w3-form">
+<form action='#' id="my_form" class="w3-form">
+    <div class="poker_situation">
+        <div class="player_cards">
+            <img>
+            <img>
+        </div>
 
-    <div class="player_cards">
-        <img>
-        <img>
+        <label for="name">Name: </label>
+        <input type="text" name="name" value="Player1" readonly>
+
+        <label for="position">Position: </label>
+        <input type="number" name="position" value="3" readonly>
+        of:
+        <input type="number" name="number_of_players" value="3" readonly><br>
+
+
+
+        <!--<label for="email">Email: </label>
+        <input type="text" name="email">-->
+
+        <label for="phase">Phase: </label>
+        <input type="text" name="phase" value="preflop" readonly><br>   <!--"preflop", "flop", "turn", "river"-->
+
+        <label for="action_abstract">Preceding Action: </label>
+        <input type="text" name="action_abstract" value="none" readonly><br>  <!--"none", "m", "l", "xl", "allin"-->
+
+
+        <label for="amount_to_call">Amount to call (in BBs): </label>
+        <input type="number" name="amount_to_call" value="1" readonly><br>
+
+        <label for="potsize">Potsize (in BBs): </label>
+        <input type="number" name="potsize" value="1.5" readonly><br>
+
+        <label for="stacksize">Stack (in BBs): </label>
+        <input type="number" name="stacksize" value="50" readonly><br>
+
     </div>
-
-    <label for="name">Name: </label>
-    <input type="text" name="name" value="Player1" readonly>
-
-    <label for="position">Position: </label>
-    <input type="text" name="position" value="3" readonly>
-    of:
-    <input type="text" name="number_of_players" value="3" readonly><br>
-
-
-
-    <!--<label for="email">Email: </label>
-    <input type="text" name="email">-->
-
-    <label for="phase">Phase: </label>
-    <input type="text" name="phase" value="preflop" readonly><br>   <!--"preflop", "flop", "turn", "river"-->
-
-    <label for="action_abstract">Preceding Action: </label>
-    <input type="text" name="action_abstract" value="none" readonly><br>  <!--"none", "m", "l", "xl", "allin"-->
-
-
-    <label for="amount_to_call">Amount to call (in BBs): </label>
-    <input type="text" name="amount_to_call" value="1" readonly><br>
-
-    <label for="potsize">Potsize (in BBs): </label>
-    <input type="text" name="potsize" value="1.5" readonly><br>
-
-    <label for="stacksize">Stack (in BBs): </label>
-    <input type="text" name="stacksize" value="50" readonly><br>
-
-
     <div class="player_action">
-    <input type="button" name="fold_button" value="FOLD"><input type="button" name="check_button" value="CHECK"><input type="button" name="call_button" value="CALL"><input type="button" name="raise_button" value="RAISE..."><input type="button" name="allin_button" value="ALLIN">
+        <input type="button" name="fold_button" value="FOLD"><input type="button" name="check_button" value="CHECK"><input type="button" name="call_button" value="CALL"><input type="button" name="raise_button" value="RAISE..."><input type="button" name="allin_button" value="ALLIN">
     </div>
 
 
