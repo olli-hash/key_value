@@ -36,9 +36,11 @@
 .player_action {
     clear: both;
     width: 100%;
+    display: flex;
 }
 
 .player_action input {
+    flex-grow: 1;
     background-color: red;
     color: white;
     font-size: 300%;
