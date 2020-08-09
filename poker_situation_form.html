@@ -43,7 +43,7 @@
 </head>
 <body>
 
-<form action='#' id="my_form" class="w3-form olliform">
+<form action='#' id="my_form" class="w3-form pokerform">
     <div class="poker_situation">
         <div class="cards w3-light-green">
             <label for="player_cards">Your Cards: </label>
@@ -102,6 +102,19 @@
     <div class="player_action w3-pale-red">
         <input type="button" name="fold_button" value="FOLD"><input type="button" name="check_button" value="CHECK"><input type="button" name="call_button" value="CALL"><input type="button" name="raise_button" value="RAISE..."><input type="button" name="allin_button" value="ALLIN">
     </div>
+
+    <div class="options">
+        <label for="BB">BB: </label>
+        <input type="number" name="BB" value="100">
+        <label for="BB_nonnormalized">apply: </label>
+        <input type="checkbox" name="BB_nonnormalized">
+
+
+        <br>
+
+
+    </div>
+
 
 
     <!--<input type="button" id="my_button" class="w3-button" value="send">-->
