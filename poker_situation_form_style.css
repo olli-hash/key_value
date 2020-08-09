@@ -39,8 +39,15 @@
     display: flex;
 }
 
-.player_action input {
+
+.player_action .flex_item {
     flex-grow: 1;
+    padding: 2px;
+    position: relative;
+}
+
+.player_action input {
+    width: 100%;
     background-color: red;
     color: white;
     font-size: 300%;
