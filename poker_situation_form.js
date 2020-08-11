@@ -2,13 +2,16 @@
 
 $( document ).ready(function()  {
 
+    var today = new Date()
+    var today_string = today.getFullYear() + "-" + getMonth(today) + "-" + today.getDate()
+    //console.log(today_string)
+    $('input[name=date]').attr("value", today_string)
 
-    $('input[name=date]').ready(function() {
+    function getMonth(m) {
+        var x = m.getMonth() + 1
+        if (x < 10) return "0" + x
+        else return x
+    }
 
-        //alert(new Date())
-
-        this.value = "1980-01-11"
-
-    })
 
 })
