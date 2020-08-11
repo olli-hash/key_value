@@ -81,7 +81,7 @@
         <input type="number" name="stacksize" value="50" readonly><br>
 
     </div>
-    <div class="player_action w3-pale-green">
+    <div class="player_action w3-light-gray">
         <div class="flex_item"><input type="button" name="fold_button" value="FOLD"></div><div class="flex_item"><input type="button" name="check_button" value="CHECK"></div><div class="flex_item"><input type="button" name="call_button" value="CALL"></div><div class="flex_item"><input type="button" name="raise_button" value="RAISE..."></div><div class="flex_item"><input type="button" name="allin_button" value="ALLIN"></div>
     </div>
 
@@ -91,22 +91,26 @@
             <fieldset>
                 <legend>Options</legend>
                 <div class="fieldset_content">
-                    <label for="BB">1 BB = </label>
-                    <input type="number" name="BB" value="100">
+                    <div class="flex_item_child">
+                        <label for="BB">1 BB = </label>
+                        <input type="number" name="BB" value="100">
 
-                    <label for="currency">Currency: </label>
-                    <select name="currency">
-                        <option value="dollar">none</option>
-                        <option value="dollar">$</option>
-                        <option value="euro">€</option>
-                    </select>
+                        <label for="currency">Currency: </label>
+                        <select name="currency">
+                            <option value="dollar">none</option>
+                            <option value="dollar">$</option>
+                            <option value="euro">€</option>
+                        </select>
 
-                    <label for="BB_nonnormalized" class="short">apply: </label>
-                    <input type="checkbox" name="BB_nonnormalized">
-                    <br>
+                        <label for="BB_nonnormalized" class="short">apply: </label>
+                        <input type="checkbox" name="BB_nonnormalized">
+                    </div>
 
-                    <label for="hide_helpers">Hide Helpers:</label>
-                    <input type="checkbox" name="hide_helpers">
+
+                    <div class="flex_item_child">
+                        <label for="hide_helpers">Hide helpers:</label>
+                        <input type="checkbox" name="hide_helpers">
+                    </div>
                 </div>
             </fieldset>
         </div>
@@ -115,29 +119,34 @@
             <fieldset>
                 <legend>meta</legend>
                 <div class="fieldset_content">
-                    <label for="realness">Money is </label>
-                    <select name="realness">
-                        <option value="unreal">unreal</option>
-                        <option value="real">real</option>
-                    </select>
+                    <div class="flex_item_child">
+                        <label for="realness">Money is: </label>
+                        <select name="realness">
+                            <option value="unreal">unreal</option>
+                            <option value="real">real</option>
+                        </select>
 
-                    <label for="buyin">Buyin: </label>
-                    <input type="number" name="buyin" value="100">
+                        <label for="buyin">Buyin was: </label>
+                        <input type="number" name="buyin" value="100">
 
-                    <label for="date">Date:</label>
-                    <input type="date" name="date" value="1980-07-04">
-                    <label for="decision_time">Decision Time:</label>
-                    <input type="text" name="decision_time" value="0">
+                        <label for="date">Date:</label>
+                        <input type="date" name="date" value="1980-07-04">
+                    </div>
+
+                    <div class="flex_item_child">
+                        <label for="decision_time">Decision Time:</label>
+                        <input type="text" name="decision_time" value="0">
 
 
-                    <label for="program_version">System-Version:</label>
-                    <input type="text" name="program_version" value="0.01">
+                        <label for="program_version">System-Version:</label>
+                        <input type="text" name="program_version" value="0.01">
 
 
-                    <label for="used_in_games">Used in these games: </label>
-                    <select name="used_in_games">
-                        <option value="aa001">aa001</option>
-                    </select>
+                        <label for="used_in_games">Used in these games: </label>
+                        <select name="used_in_games">
+                            <option value="aa001">aa001</option>
+                        </select>
+                    </div>
                 </div>
 
             </fieldset>
@@ -148,20 +157,25 @@
             <fieldset>
                 <legend>Subjectivity and Motivation</legend>
                 <div class="fieldset_content">
-                    <label for="aggressive">aggressive:</label>
-                    <input type="number" name="aggressive" value="">
-                    <label for="rational">rational:</label>
-                    <input type="number" name="rational" value="">
-                    <label for="clear_intention">clear Intention:</label>
-                    <input type="number" name="clear_intention" value="">
-                    <label for="bluff">bluff:</label>
-                    <input type="number" name="bluff" value="">
-                    <label for="fear">fear:</label>
-                    <input type="number" name="fear" value="">
-                    <label for="fearlessness">fearlessness:</label>
-                    <input type="number" name="fearlessness" value="">
-                    <label for="testing opponent">testing opponent</label>
-                    <input type="number" name="testing opponent" value="">
+                    <div class="flex_item_child">
+                        <label for="aggressive">aggressive:</label>
+                        <input type="number" name="aggressive" value="">
+                        <label for="rational">rational:</label>
+                        <input type="number" name="rational" value="">
+                        <label for="clear_intention">clear Intention:</label>
+                        <input type="number" name="clear_intention" value="">
+                    </div>
+
+                    <div class="flex_item_child">
+                        <label for="bluff">bluff:</label>
+                        <input type="number" name="bluff" value="">
+                        <label for="fear">fear:</label>
+                        <input type="number" name="fear" value="">
+                        <label for="fearless">fearless:</label>
+                        <input type="number" name="fearless" value="">
+                        <label for="testing opponent">testing opponent</label>
+                        <input type="number" name="testing opponent" value="">
+                    </div>
                 </div>
 
             </fieldset>

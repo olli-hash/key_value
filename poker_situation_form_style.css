@@ -9,6 +9,10 @@
 
 }
 
+.pokerform input[type=date] {
+    width: auto;
+}
+
 .poker_situation input, .pokerform input, .pokerform select {
     display: inline-block;
     margin: 3px;
@@ -70,6 +74,13 @@ label {
 
 .fieldset_content {     /* 5. Level */
     padding: 10px 40px;
+    display: flex;
+}
+
+.fieldset_content .flex_item_child {
+    flex-grow: 1;
+    padding: 2px;
+    position: relative;
 }
 
 .player_action .flex_item {
