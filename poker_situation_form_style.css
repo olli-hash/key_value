@@ -1,48 +1,42 @@
 
-
-.pokerform {
+.pokerform {            /* 1. Level */
     border: 2px solid black;
     margin: 100px;
     width: 1100px;
 }
 
-
-.poker_situation {
+.poker_situation {      /* 2. Level */
 
 }
 
-.Name_and_Position {
-    margin-bottom: 4px;
+.poker_situation input, .pokerform input, .pokerform select {
+    display: inline-block;
+    margin: 3px;
+    width: 110px;
 }
 
-.bottom_half {
-
-    padding: 3px 20px;
-    color: #555;
+.poker_situation input:hover {
+    box-shadow: 1px 1px 5px 5px black;
 }
 
-.bottom_half * {
-
-    color: #555;
+label {
+    display: inline-block;
 }
 
-.options fieldset {
-
-
-    padding: 0px;
-    overflow: hidden;
-}
-.options fieldset:hover {
-
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.pokerform label.short {
+    width: 40px;
+    text-align: right;
 }
 
-.fieldset_content {
-    padding: 10px 80px;
+.poker_situation label {
+    width: 150px;
 }
-.cards {
+
+.bottom_half label {
+    width: 110px;
+}
+
+.cards {                /* 3. Level */
     float:right;
     width: 30%;
     height: 100%;
@@ -50,21 +44,33 @@
 }
 
 .poker_situation .cards input {
-
     font-family: monospace;
     font-size: 170%;
-
     width: 250px;
-
 }
 
+.Name_and_Position {    /* 3. Level */
+    margin-bottom: 4px;
+}
 
-.player_action {
+.player_action {        /* 2. Level */
     clear: both;
     width: 100%;
     display: flex;
 }
 
+.bottom_half {          /* 2. Level */
+    padding: 3px 20px;
+    color: #555;
+}
+
+.bottom_half * {
+    color: #555;
+}
+
+.fieldset_content {     /* 5. Level */
+    padding: 10px 40px;
+}
 
 .player_action .flex_item {
     flex-grow: 1;
@@ -80,28 +86,9 @@
     padding: 12px;
     margin:2px;
     border:0px solid white;
-
     box-shadow: 0px;
 }
 
 .player_action input:hover {
     box-shadow: 0px 0px 5px 3px black;
-}
-
-
-.poker_situation input {
-    display: inline-block;
-    margin: 3px;
-    width: 110px;
-
-}
-
-.poker_situation input:hover {
-    box-shadow: 1px 1px 5px 5px black;
-
-}
-.poker_situation label, .bottom_half label {
-    display: inline-block;
-    width: 150px;
-
 }

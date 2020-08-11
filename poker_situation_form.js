@@ -7,7 +7,7 @@ $( document ).ready(function()  {
 
         //alert(new Date())
 
-        $(this).value = "11.01.1980"
+        this.value = "1980-01-11"
 
     })
 

@@ -14,35 +14,9 @@
     src = "poker_situation_form.js">
 </script>
 
-
-
 <script>
 
     $( document ).ready(function()  {
-
-
-        $('input[name=number_of_players]').click(function() {
-
-            alert(this.value)
-
-        })
-
-
-
-
-
-        $('#my_button').click(function() {
-                var form = document.getElementById('my_form')
-                var data = new FormData(form)
-                var result = {}
-                for (var pair of data.entries()) {
-                    console.log(pair)
-                    result[pair[0]] = pair[1]
-                }
-                var output = document.getElementById('output')
-                output.innerHTML = 'Hello ' + result.name + ' your email is ' + result.email
-        })
-
 
     })
 
@@ -116,50 +90,55 @@
         <div class="options">
             <fieldset>
                 <legend>Options</legend>
-                <label for="BB">1 BB = </label>
-                <input type="number" name="BB" value="100">
-                <label for="BB_nonnormalized">apply: </label>
-                <input type="checkbox" name="BB_nonnormalized">
+                <div class="fieldset_content">
+                    <label for="BB">1 BB = </label>
+                    <input type="number" name="BB" value="100">
 
-                <label for="currency">Currency: </label>
-                <select name="currency">
-                    <option value="dollar">none</option>
-                    <option value="dollar">$</option>
-                    <option value="euro">€</option>
-                </select>
+                    <label for="currency">Currency: </label>
+                    <select name="currency">
+                        <option value="dollar">none</option>
+                        <option value="dollar">$</option>
+                        <option value="euro">€</option>
+                    </select>
 
+                    <label for="BB_nonnormalized" class="short">apply: </label>
+                    <input type="checkbox" name="BB_nonnormalized">
+                    <br>
 
-                <label for="realness">Money is </label>
-                <select name="realness">
-                    <option value="unreal">unreal</option>
-                    <option value="real">real</option>
-                </select>
-
-                <label for="buyin">Buyin: </label>
-                <input type="number" name="buyin" value="100">
-
-
-                <br>
+                    <label for="hide_helpers">Hide Helpers:</label>
+                    <input type="checkbox" name="hide_helpers">
+                </div>
             </fieldset>
         </div>
 
         <div class="meta">
             <fieldset>
                 <legend>meta</legend>
-                <label for="date">Date:</label>
-                <input type="date" name="date" value="">
-                <label for="decision_time">Decision Time:</label>
-                <input type="text" name="decision_time" value="0">
+                <div class="fieldset_content">
+                    <label for="realness">Money is </label>
+                    <select name="realness">
+                        <option value="unreal">unreal</option>
+                        <option value="real">real</option>
+                    </select>
+
+                    <label for="buyin">Buyin: </label>
+                    <input type="number" name="buyin" value="100">
+
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" value="1980-07-04">
+                    <label for="decision_time">Decision Time:</label>
+                    <input type="text" name="decision_time" value="0">
 
 
-                <label for="program_version">System-Version:</label>
-                <input type="text" name="program_version" value="0.01">
+                    <label for="program_version">System-Version:</label>
+                    <input type="text" name="program_version" value="0.01">
 
 
-                <label for="used_in_games">Used in these games: </label>
-                <select name="used_in_games">
-                    <option value="aa001">aa001</option>
-                </select>
+                    <label for="used_in_games">Used in these games: </label>
+                    <select name="used_in_games">
+                        <option value="aa001">aa001</option>
+                    </select>
+                </div>
 
             </fieldset>
         </div>
