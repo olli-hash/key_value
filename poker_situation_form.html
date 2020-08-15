@@ -28,10 +28,15 @@
 <form action='#' id="my_form" class="w3-form pokerform">
     <div class="poker_situation">
         <div class="cards w3-light-green">
-            <label for="player_cards">Your Cards: </label>
-            <input type="text" name="player_cards" value="Qh Ts" readonly>
-            <label for="board_cards">Board Cards: </label>
-            <input type="text" name="board_cards" value="-- -- -- -- --" readonly>
+            <div class="phase">
+                <input type="text" name="phase" value="preflop" readonly>
+            </div>
+
+
+            <label for="player_cards">Your Cards: </label><br>
+            <input type="text" name="player_cards_one" value="Qh" readonly><input type="text" name="player_cards_two" value="Ts" readonly>
+            <br><label for="board_cards">Board Cards: </label><br>
+            <input type="text" name="board_cards_one" value="--" readonly><input type="text" name="board_cards_two" value="--" readonly><input type="text" name="board_cards_three" value="--" readonly><input type="text" name="board_cards_four" value="--" readonly><input type="text" name="board_cards_five" value="--" readonly>
         </div>
 
 
@@ -40,32 +45,49 @@
             <input type="text" name="name" value="Player1" readonly>
 
             <label for="position">Position: </label>
-            <input type="number" name="position" value="3" readonly>
+            <input type="text" name="position" value="3" readonly>
             of:
-            <input type="number" name="number_of_players" value="3" readonly><br>
+            <input type="text" name="number_of_players" value="3" readonly><br>
         </div>
 
 
-        <!--<label for="email">Email: </label>
-        <input type="text" name="email">-->
-
-        <label for="phase">Phase: </label>
-        <input type="text" name="phase" value="preflop" readonly>
-        <input type="text" name="phase2" value="flop" readonly disabled>
-        <input type="text" name="phase3" value="turn" readonly disabled>
-        <input type="text" name="phase4" value="river" readonly disabled>
-
-
-        <br>
-
-        <label for="action_abstract">Preceding Action: </label>
-        <input type="text" name="action_abstract" value="none" readonly>
-        <input type="text" name="action_abstract2" value="---" readonly disabled>
-        <input type="text" name="action_abstract3" value="---" readonly disabled>
-        <input type="text" name="action_abstract4" value="---" readonly disabled>
-
-
-
+        <table>
+        <tr>
+            <th></th>
+            <th>preflop</th>
+            <th>flop</th>
+            <th>turn</th>
+            <th>river</th>
+        </tr>
+        <tr>
+            <td>Action abstract:</td>
+            <td><input type="text" name="action_abstract_preflop" value="none"></td>
+            <td><input type="text" name="action_abstract_flop" value=""></td>
+            <td><input type="text" name="action_abstract_turn" value=""></td>
+            <td><input type="text" name="action_abstract_river" value=""></td>
+        </tr>
+        <tr>
+            <td>Pot Growth:</td>
+            <td><input type="text" name="" value=""></td>
+            <td><input type="text" name="" value=""></td>
+            <td><input type="text" name="" value=""></td>
+            <td><input type="text" name="" value=""></td>
+         </tr>
+         <tr>
+            <td>Raisers:</td>            <!--  Callers? Folders? -->
+            <td><input type="text" name="" value=""></td>                   <!--  "Active Calls"  ?-->              <!--  "Active Bets"  ?-->
+            <td><input type="text" name="" value=""></td>
+            <td><input type="text" name="" value=""></td>
+            <td><input type="text" name="" value=""></td>
+          </tr>
+          <tr>
+              <td>Active calls:</td>
+              <td><input type="text" name="" value=""></td>
+              <td><input type="text" name="" value=""></td>
+              <td><input type="text" name="" value=""></td>
+              <td><input type="text" name="" value=""></td>
+           </tr>
+        </table>
 
 
         <br>  <!--"none", "m", "l", "xl", "allin"-->
@@ -80,6 +102,8 @@
         <label for="stacksize">Stack (in BBs): </label>
         <input type="number" name="stacksize" value="50" readonly><br>
 
+        create consecutive situation:  <input type="checkbox" name="next_situation">
+
     </div>
     <div class="player_action w3-light-gray">
         <div class="flex_item"><input type="button" name="fold_button" value="FOLD"></div><div class="flex_item"><input type="button" name="check_button" value="CHECK"></div><div class="flex_item"><input type="button" name="call_button" value="CALL"></div><div class="flex_item"><input type="button" name="raise_button" value="RAISE..."></div><div class="flex_item"><input type="button" name="allin_button" value="ALLIN"></div>
@@ -89,28 +113,59 @@
 
         <div class="options">
             <fieldset>
-                <legend>Options</legend>
+                <legend>Display Options</legend>
                 <div class="fieldset_content">
-                    <div class="flex_item_child">
                         <label for="BB">1 BB = </label>
                         <input type="number" name="BB" value="100">
 
+                        <span>
                         <label for="currency">Currency: </label>
                         <select name="currency">
                             <option value="dollar">none</option>
                             <option value="dollar">$</option>
                             <option value="euro">€</option>
                         </select>
+                        </span>
 
                         <label for="BB_nonnormalized" class="short">apply: </label>
                         <input type="checkbox" name="BB_nonnormalized">
-                    </div>
 
-
-                    <div class="flex_item_child">
                         <label for="hide_helpers">Hide helpers:</label>
                         <input type="checkbox" name="hide_helpers">
-                    </div>
+                        <br><br>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="money">
+            <fieldset>
+                <legend>Money</legend>
+                <div class="fieldset_content">
+                    <span>
+                    <label for="realness_money">Money is: </label>
+                    <select name="realness_money">
+                        <option value="unreal">unreal</option>
+                        <option value="real">real</option>
+                    </select>
+                    </span>
+                    <span>
+                    <label for="realness_buyin">Buyin was: </label>
+                    <select name="realness_buyin">
+                        <option value="real">real</option>
+                        <option value="unreal">unreal</option>
+                    </select>
+                    </span>
+
+                    <span>
+                    <label for="buyin">Buyin:</label>
+                    <input type="text" name="buyin" value="100 €">
+                    </span>
+
+                    <span>
+                    <label for="to win">to win:</label>
+                    <input type="text" name="to win" value="1000 €">
+                    </span>
+
                 </div>
             </fieldset>
         </div>
@@ -119,21 +174,9 @@
             <fieldset>
                 <legend>meta</legend>
                 <div class="fieldset_content">
-                    <div class="flex_item_child">
-                        <label for="realness">Money is: </label>
-                        <select name="realness">
-                            <option value="unreal">unreal</option>
-                            <option value="real">real</option>
-                        </select>
-
-                        <label for="buyin">Buyin was: </label>
-                        <input type="number" name="buyin" value="100">
 
                         <label for="date">Date:</label>
                         <input type="date" name="date" value="1980-07-04">
-                    </div>
-
-                    <div class="flex_item_child">
                         <label for="decision_time">Decision Time:</label>
                         <input type="text" name="decision_time" value="0">
 
@@ -141,13 +184,27 @@
                         <label for="program_version">System-Version:</label>
                         <input type="text" name="program_version" value="0.01">
 
+                        <label for="do_statistics">do statistics:</label>
+                        <input type="text" name="do_statistics" value="yes">
+
+                        <label for="status">status:</label>
+                        <input type="text" name="status" value="experimental">
+
+                        <label for="this_entry_creation_mode">created: </label>
+                        <select name="this_entry_creation_mode">
+                            <option value="in_a_study">in_a_study</option>
+                            <option value="in_a_game">in a game</option>
+                        </select>
 
                         <label for="used_in_games">Used in these games: </label>
                         <select name="used_in_games">
                             <option value="aa001">aa001</option>
                         </select>
-                    </div>
-                </div>
+
+
+
+
+            </div>
 
             </fieldset>
         </div>
@@ -155,27 +212,33 @@
 
         <div class="Subjectivity">
             <fieldset>
-                <legend>Subjectivity and Motivation</legend>
+                <legend>Subjectivity, Intentions, Perceptions</legend>
                 <div class="fieldset_content">
-                    <div class="flex_item_child">
-                        <label for="aggressive">aggressive:</label>
-                        <input type="number" name="aggressive" value="">
-                        <label for="rational">rational:</label>
-                        <input type="number" name="rational" value="">
-                        <label for="clear_intention">clear Intention:</label>
-                        <input type="number" name="clear_intention" value="">
-                    </div>
+                    <label for="aggressive">aggressive:</label>
+                    <input type="number" name="aggressive" value="">
+                    <label for="rational">rational:</label>
+                    <input type="number" name="rational" value="">
+                    <label for="clear_intention">clear intention:</label>
+                    <input type="number" name="clear_intention" value="">
 
-                    <div class="flex_item_child">
-                        <label for="bluff">bluff:</label>
-                        <input type="number" name="bluff" value="">
-                        <label for="fear">fear:</label>
-                        <input type="number" name="fear" value="">
-                        <label for="fearless">fearless:</label>
-                        <input type="number" name="fearless" value="">
-                        <label for="testing opponent">testing opponent</label>
-                        <input type="number" name="testing opponent" value="">
-                    </div>
+                    <label for="bluff">bluff:</label>
+                    <input type="number" name="bluff" value="">
+                    <label for="fear">fear:</label>
+                    <input type="number" name="fear" value="">
+                    <label for="fearless">fearless:</label>
+                    <input type="number" name="fearless" value="">
+                    <label for="testing_opponent">testing opponent:</label>
+                    <input type="number" name="testing_opponent" value="">
+                    <label for="know_next_move">know next move: </label>
+                    <input type="number" name="know_next_move" value="">
+
+                    <label for="my_handstrength">my handstrength:</label>
+                    <input type="number" name="my_handstrength" value="">
+
+                    <label for="nuts_or_monster">nuts or only monster?:</label>
+                    <input type="number" name="nuts_or_monster" value="">
+
+
                 </div>
 
             </fieldset>

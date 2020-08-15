@@ -13,5 +13,17 @@ $( document ).ready(function()  {
         else return x
     }
 
+    //  ------- ------- ------- ------- ------- ------- ------- ------- -------
+
+    $('.cards input').mouseenter(function(){
+        $(this).css("z-index", "100")
+    })
+    $('.cards input').mouseleave(function(){
+        $(this).css("z-index", "10")
+    })
+
+
+
+
 
 })

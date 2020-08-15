@@ -1,8 +1,37 @@
 
+body {
+    background-color: #eee;
+}
+
+
 .pokerform {            /* 1. Level */
     border: 2px solid black;
     margin: 100px;
     width: 1100px;
+}
+
+.pokerform table {
+    table-layout: fixed;
+    /* border-collapse: separate;
+    border-spacing: 6px; */
+    border-collapse: collapse;
+    border: 0px;
+}
+
+.pokerform table th {
+    font-weight: normal;
+    text-align: center;
+}
+
+.pokerform table td, .pokerform table th {
+    width: 110px;
+    border: 0px solid #7a7a7a;
+
+}
+
+table tr td:nth-child(1) {
+    width: 150px;
+    border: 0px;
 }
 
 .poker_situation {      /* 2. Level */
@@ -13,6 +42,15 @@
     width: auto;
 }
 
+.pokerform label[for=position] {
+    width: auto;
+}
+
+.pokerform input[name=position], .pokerform input[name=number_of_players] {
+    width: 30px;
+}
+
+
 .poker_situation input, .pokerform input, .pokerform select {
     display: inline-block;
     margin: 3px;
@@ -20,7 +58,7 @@
 }
 
 .poker_situation input:hover {
-    box-shadow: 1px 1px 5px 5px black;
+    box-shadow: 0px 0px 5px 5px black;
 }
 
 label {
@@ -42,19 +80,42 @@ label {
 
 .cards {                /* 3. Level */
     float:right;
-    width: 30%;
+    width: 33%;
     height: 100%;
-    padding: 50px;
+    padding: 30px 50px 50px 50px ;
 }
 
-.poker_situation .cards input {
+.poker_situation .cards input {         /* 4. Level */
     font-family: monospace;
     font-size: 170%;
-    width: 250px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 45px;
+    margin: 1px 0px 1px 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
 }
+
+.poker_situation .cards input[name=phase] {
+    background-color:inherit;
+    border: 0px;
+    text-align: center;
+    font-size: 120%;
+    font-weight: 900;
+    width: 80px;
+}
+
+.poker_situation .cards .phase {
+    text-align: right;
+}
+
 
 .Name_and_Position {    /* 3. Level */
     margin-bottom: 4px;
+    /* border: 5px solid red; */
 }
 
 .player_action {        /* 2. Level */
@@ -72,13 +133,29 @@ label {
     color: #555;
 }
 
+.bottom_half .options fieldset {
+    float: left;
+    width: 50%;
+}
+
+.bottom_half .meta fieldset {
+    clear:both;
+}
+
+.bottom_half .options fieldset .fieldset_content {
+    columns: initial;
+}
+
 .fieldset_content {     /* 5. Level */
     padding: 10px 40px;
-    display: flex;
+    columns: 300px 3;
+}
+
+.fieldset_content span {
+    white-space: nowrap;
 }
 
 .fieldset_content .flex_item_child {
-    flex-grow: 1;
     padding: 2px;
     position: relative;
 }
