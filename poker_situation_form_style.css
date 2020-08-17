@@ -34,10 +34,6 @@ table tr td:nth-child(1) {
     border: 0px;
 }
 
-.poker_situation {      /* 2. Level */
-
-}
-
 .pokerform input[type=date] {
     width: auto;
 }
@@ -50,6 +46,21 @@ table tr td:nth-child(1) {
     width: 30px;
 }
 
+label {
+    display: inline-block;
+}
+
+.pokerform label.short {
+    width: 40px;
+    text-align: right;
+}
+
+/* ------ ------ ------ ------ .poker_situation ------ ------ ------ ------ ------   */
+
+
+.poker_situation {      /* 2. Level */
+
+}
 
 .poker_situation input, .pokerform input, .pokerform select {
     display: inline-block;
@@ -61,14 +72,6 @@ table tr td:nth-child(1) {
     box-shadow: 0px 0px 5px 5px black;
 }
 
-label {
-    display: inline-block;
-}
-
-.pokerform label.short {
-    width: 40px;
-    text-align: right;
-}
 
 .poker_situation label {
     width: 150px;
@@ -118,11 +121,37 @@ label {
     /* border: 5px solid red; */
 }
 
+/* ------ ------ ------ ------ .player_action ------ ------ ------ ------ ------   */
+
+
 .player_action {        /* 2. Level */
     clear: both;
     width: 100%;
     display: flex;
 }
+
+.player_action .flex_item {
+    flex-grow: 1;
+    padding: 2px;
+    position: relative;
+}
+
+.player_action input {
+    width: 100%;
+    background-color: red;
+    color: white;
+    font-size: 300%;
+    padding: 12px;
+    margin:2px;
+    border:0px solid white;
+    box-shadow: 0px;
+}
+
+.player_action input:hover {
+    box-shadow: 0px 0px 5px 3px black;
+}
+
+/* ------ ------ ------ ------ .bottom_half ------ ------ ------ ------ ------   */
 
 .bottom_half {          /* 2. Level */
     padding: 3px 20px;
@@ -158,25 +187,4 @@ label {
 .fieldset_content .flex_item_child {
     padding: 2px;
     position: relative;
-}
-
-.player_action .flex_item {
-    flex-grow: 1;
-    padding: 2px;
-    position: relative;
-}
-
-.player_action input {
-    width: 100%;
-    background-color: red;
-    color: white;
-    font-size: 300%;
-    padding: 12px;
-    margin:2px;
-    border:0px solid white;
-    box-shadow: 0px;
-}
-
-.player_action input:hover {
-    box-shadow: 0px 0px 5px 3px black;
 }

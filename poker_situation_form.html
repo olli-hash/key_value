@@ -60,21 +60,42 @@
             <th>river</th>
         </tr>
         <tr>
-            <td>Action abstract:</td>
-            <td><input type="text" name="action_abstract_preflop" value="none"></td>
-            <td><input type="text" name="action_abstract_flop" value=""></td>
-            <td><input type="text" name="action_abstract_turn" value=""></td>
-            <td><input type="text" name="action_abstract_river" value=""></td>
+            <td>my Stack (in BBs):</td>
+            <td><input type="text" name="stack_preflop" value="50"></td>
+            <td><input type="text" name="stack_flop" value=""></td>
+            <td><input type="text" name="stack_turn" value=""></td>
+            <td><input type="text" name="stack_river" value=""></td>
         </tr>
         <tr>
-            <td>Pot Growth:</td>
-            <td><input type="text" name="" value=""></td>
-            <td><input type="text" name="" value=""></td>
-            <td><input type="text" name="" value=""></td>
-            <td><input type="text" name="" value=""></td>
+            <td>to call:</td>
+            <td><input type="text" name="to_call_preflop" value="1"></td>
+            <td><input type="text" name="to_call_flop" value=""></td>
+            <td><input type="text" name="to_call_turn" value=""></td>
+            <td><input type="text" name="to_call_river" value=""></td>
+        </tr>
+        <tr>
+            <td>Pot:</td>
+            <td><input type="text" name="pot_preflop" value="1.5"></td>
+            <td><input type="text" name="pot_flop" value=""></td>
+            <td><input type="text" name="pot_turn" value=""></td>
+            <td><input type="text" name="pot_river" value=""></td>
          </tr>
          <tr>
-            <td>Raisers:</td>            <!--  Callers? Folders? -->
+             <td>Pot Growth:</td>
+             <td><input type="text" name="potgrowth_preflop" value="0"></td>
+             <td><input type="text" name="potgrowth_flop" value=""></td>
+             <td><input type="text" name="potgrowth_turn" value=""></td>
+             <td><input type="text" name="potgrowth_river" value=""></td>
+          </tr>
+          <tr>
+              <td>Pot Odds:</td>
+              <td><input type="text" name="potodds_preflop" value="1 : 1.5"></td>
+              <td><input type="text" name="potodds_flop" value=""></td>
+              <td><input type="text" name="potodds_turn" value=""></td>
+              <td><input type="text" name="potodds_river" value=""></td>
+           </tr>
+         <tr>
+            <td>Raises:</td>            <!--  Callers? Folders? -->
             <td><input type="text" name="" value=""></td>                   <!--  "Active Calls"  ?-->              <!--  "Active Bets"  ?-->
             <td><input type="text" name="" value=""></td>
             <td><input type="text" name="" value=""></td>
@@ -87,20 +108,41 @@
               <td><input type="text" name="" value=""></td>
               <td><input type="text" name="" value=""></td>
            </tr>
+           <tr>
+               <td>Unconfirmed calls:</td>
+               <td><input type="text" name="" value=""></td>
+               <td><input type="text" name="" value=""></td>
+               <td><input type="text" name="" value=""></td>
+               <td><input type="text" name="" value=""></td>
+            </tr>
+            <tr>
+                <td>Folds:</td>
+                <td><input type="text" name="" value=""></td>
+                <td><input type="text" name="" value=""></td>
+                <td><input type="text" name="" value=""></td>
+                <td><input type="text" name="" value=""></td>
+             </tr>
+            <!-- <tr>
+                <td>Action abstract:</td>
+                <td><input type="text" name="action_abstract_preflop" value="none"></td>
+                <td><input type="text" name="action_abstract_flop" value=""></td>
+                <td><input type="text" name="action_abstract_turn" value=""></td>
+                <td><input type="text" name="action_abstract_river" value=""></td>
+            </tr> -->
         </table>
 
 
         <br>  <!--"none", "m", "l", "xl", "allin"-->
 
 
-        <label for="amount_to_call">Amount to call (in BBs): </label>
+        <!-- <label for="amount_to_call">Amount to call (in BBs): </label>
         <input type="number" name="amount_to_call" value="1" readonly><br>
 
         <label for="potsize">Potsize (in BBs): </label>
         <input type="number" name="potsize" value="1.5" readonly><br>
 
         <label for="stacksize">Stack (in BBs): </label>
-        <input type="number" name="stacksize" value="50" readonly><br>
+        <input type="number" name="stacksize" value="50" readonly><br> -->
 
         create consecutive situation:  <input type="checkbox" name="next_situation">
 
