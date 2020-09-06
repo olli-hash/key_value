@@ -1,23 +1,48 @@
 
+.chart-container {
+    box-shadow: 0px 0px 5px 5px #000;
+    margin: 10px 50px 0px 10px;
+    width: 30%;
+    background-color: inherit;
+    float:right;
+    /* height:20vh; width:30vw */
+}
+
+.position_relative {
+    position: relative;
+}
+
+.controlbox {
+    position:fixed;
+    width:300px;
+    height:300px;
+    right:10px;
+    top:100px;
+
+    background: rgba(255, 0, 0, 0.8);
+
+    border: 2px solid blue;
+    border-radius: 10px;
+    margin: 50px 100px 100px 100px;
+    padding: 5px;
+}
+
 form.form_of_questions_and_statements {
+
+    float: right;
     border: 1px solid blue;
     border-radius: 10px;
-    margin: 100px;
+    margin: -110px 100px 100px 100px;
     width: 70%;
     padding: 5px;
     background-color: LightSkyBlue ;
     box-shadow: 0px 0px 5px 5px #000;
 }
 
-.chart-container {
-    box-shadow: 0px 0px 5px 5px #000;
-    margin: 100px;
-}
-
 .question {
     border: 1px solid blue;
     border-radius: 10px;
-    margin: 100px;
+    margin: 50px 100px 100px 100px;
     width: 70%;
     padding: 5px;
 }
