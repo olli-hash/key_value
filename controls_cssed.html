@@ -52,15 +52,59 @@
         <canvas id="myChart" ></canvas>
     </div>
 
+    <br> <a href="https://api.jquery.com/position/">https://api.jquery.com/position/</a>
+    <br> <a href="https://api.jquery.com/css/">https://api.jquery.com/css/</a>
+    <br> <a href="https://api.jquery.com/category/dimensions/">https://api.jquery.com/category/dimensions/</a>
+    <br> <a href="https://api.jquery.com/category/manipulation/">https://api.jquery.com/category/manipulation/</a>
+    <br> <a href="https://api.jquery.com/clone/">https://api.jquery.com/clone/</a>
+    <br> <a href="https://www.w3schools.com/cssref/pr_class_float.asp">https://www.w3schools.com/cssref/pr_class_float.asp</a>
+    <br> <a href="https://www.w3schools.com/cssref/pr_class_position.asp">https://www.w3schools.com/cssref/pr_class_position.asp</a>
+    <br> <a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.asp">https://www.w3schools.com/cssref/css3_pr_box-shadow.asp</a>
 
+    <div data-kube="datepicker" data-embed="true"></div>
 
+    
+    <h3>Tooltips mit Buttons und Formularelementen? </h3>
+    <br>
     <form class="form_of_questions_and_statements position_relative" action="#">
 
         <div class="question">
-            Where is the tooltip?
-            <div class="tooltip">Hover over me
-                <span class="tooltiptext">Tooltip text</span>
+            tell me. tell me. tell me. tell me. tell me. tell me.
+            <div class="tooltip">
+                <span data-tooltip="Open. Web. Business.">
+                    Where is the tooltip?
+                </span>
+                <div class="tooltip">
+                    <span data-tooltip="YES">
+                        Is there a second??
+                    </span>
+                </div>
             </div>
+            <div class="tooltip">Hover over me
+                <span class="tooltiptext">Tooltip from span child element</span>
+            </div>
+
+            <br><br>
+            Let's make some <div class="tooltip">big tooltips...<div class="tooltiptext">Tooltip from div child element <br> and with several
+            <br> lines to play with ....
+            <br> lines to play with .... ....
+            <img src="icon1.png" alt="Icon">
+            <br> lines to play with .... ....
+            <img src="icon1.png" alt="Icon">
+            <br> lines to play with .... ....
+            <img src="icon1.png" alt="Icon">
+
+            </div></div>
+            <br> a tooltip that could even hold a <div class="tooltip">table<div class="tooltiptext">Tooltip from div child element</div></div>
+            <br> and a tooltip with a <div class="tooltip">picture<div class="tooltiptext">Tooltip from div child element</div></div> in it
+            <br>
+
+
+            <br> [ margin | border | padding | content-box ]  x  [ top | right | bottom | left ]
+
+            <br> [ <div class="tooltip">margin<div class="tooltiptext">Tooltip</div></div> | <div class="tooltip">border</div> | <div class="tooltip">padding</div> | <div class="tooltip">content-box</div> ]  x  [ <div class="tooltip">top</div> | <div class="tooltip">right</div> | <div class="tooltip">bottom</div> | <div class="tooltip">left</div> ]
+
+
 
         </div>
 
@@ -68,27 +112,33 @@
 
 
             <div class="controlbox">
-                <input type="button" class="tooltip" id="button1" name="b1" value="left">
+                <input type="button" class="tooltip" data-tooltip="Open. Web. Business." id="button1" name="b1" value="left">
                 <input type="button" id="button2" name="b2" value="right">
                 <input type="button" id="button2_A" name="b2_A" value="nofloat">
                 <br>
-                <input type="button" id="button3" name="b3" value="margin-top = 0">
-                <input type="button" id="button4" name="b4" value="margin-top = -111">
+                <div class="dimensions">
+                    <input type="button" id="button4" name="b4" value="margin-top = -111">
+                    <input type="button" id="button3" name="b3" value="margin-top = 0">
+                    <input type="button" id="button5" name="b5" value="margin-top = 50">
+                </div>
 
-
-                <select id="control_width">
+                <select id="control_width" class="tooltip" data-tooltip="Open. Web. Business.">
+                    <option value="130">130%</option>
+                    <option value="120">120%</option>
+                    <option value="110">110%</option>
                     <option value="100">100%</option>
                     <option value="90">90%</option>
                     <option value="80">80%</option>
                     <option value="70">70%</option>
                     <option value="60">60%</option>
                     <option value="50">50%</option>
-                    <option value="40">40%</option>
+                    <option value="40" selected>40%</option>
                     <option value="30">30%</option>
                     <option value="20">20%</option>
                     <option value="10">10%</option>
                 </select>
-
+                <input type="button" id="button_shadow_off" name="b_s_off" value="shadow off">
+                <br>
             </div>
             <br>
             <br>

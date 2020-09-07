@@ -1,6 +1,18 @@
 
 $(document).ready(function(){
 
+    var buttons_dimension = $('.dimensions').children().clone()
+
+    // $('.dimensions').append(buttons_dimension)
+
+
+    $('#button_shadow_off').on("click", function(){
+        $('#myChart').css("box-shadow", "none")
+        $('form.form_of_questions_and_statements').css("box-shadow", "none")
+
+    })
+
+
     $('#button1').on("click", function(){
 
         //alert($(this).prev().val())
@@ -56,6 +68,19 @@ $(document).ready(function(){
 
     })
 
+    $('#button5').on("click", function(){
+
+        //alert($(this).prev().val())
+
+        $('form.form_of_questions_and_statements').css("margin-top", "50px")
+
+        l(
+            $('form.form_of_questions_and_statements').css("margin-top")
+
+        )
+
+    })
+
 
 })
 
@@ -65,6 +90,6 @@ $(document).ready(function(){
 $(document).ready(function(){
 
     $('#control_width').on("click", function(){
-        $('form.form_of_questions_and_statements').css("width", $('#control_width').val() )
+        $('form.form_of_questions_and_statements').css("width", $('#control_width').val() + "%")
     })
 })
