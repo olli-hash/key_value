@@ -7,8 +7,12 @@ $(document).ready(function(){
 
 
     $('#button_shadow_off').on("click", function(){
-        $('#myChart').css("box-shadow", "none")
-        $('form.form_of_questions_and_statements').css("box-shadow", "none")
+        $('.short_container, .chart-container, form').css("box-shadow", "none")
+
+    })
+
+    $('#button_shadow_on').on("click", function(){
+        $('.short_container, .chart-container, form').css("box-shadow", "0px 0px 5px 5px black")
 
     })
 

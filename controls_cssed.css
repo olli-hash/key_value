@@ -1,4 +1,12 @@
 
+body>* {
+
+}
+
+.break {
+    clear:both;
+}
+
 .chart-container {
     box-shadow: 0px 0px 5px 5px #000;
     margin: 10px 50px 0px 10px;
@@ -6,6 +14,18 @@
     background-color: inherit;
     float:right;
     /* height:20vh; width:30vw */
+    border: 1px solid black;
+}
+
+.short_container {
+    height: 160px;
+    width: 30%;
+    overflow-x: auto;
+    overflow-y: auto;
+    box-shadow: 0px 0px 5px 5px #000;
+    margin: 10px;
+    float: left;
+    border: 1px solid black;
 }
 
 .position_relative {
