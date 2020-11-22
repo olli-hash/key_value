@@ -1,12 +1,32 @@
 
 $(document).ready(function(){
 
-    var buttons_dimension = $('.dimensions').children().clone()
 
-    // $('.dimensions').append(buttons_dimension)
+    $('.c_of_short_containers').tabs()
+
+    $( "#datepicker" ).datepicker()
+
+    $( "#menu" ).menu()
 
 
-    $('a').each(function(index, element){
+    $('.move_eof').each(function(i,e,array){
+        var x = $(this).detach()
+        $('body').append(x)
+    })
+
+
+    $('#oo_0').data("my_json_object", { a: 1,  b: 2  })
+    $('#oo_0').data("poker_situation", { a: 1,  b: 2  })
+    $('#oo_0').data("preflop_restrictions", { a: 1,  b: 2  })
+
+    $('#switch_time_objects_display button.up_button').on("click", function(){
+        var my = $(this)
+        // my.hide()
+        my.toggle( "explode" )
+        my.siblings('button.down_button').show()
+    })
+
+    $('aa').each(function(index, element){
         var attr = $(element).attr("href")
         var html = $(element).html()
         var sub = html.substring(8)
@@ -82,6 +102,10 @@ $(document).ready(function(){
         )
     })
 
+    $('#control_width').on("click", function(){
+        var target = $('#target_switch').val()
+        $(target).css("width", $('#control_width').val() + "%")
+    })
 
 })
 
@@ -89,8 +113,4 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-    $('#control_width').on("click", function(){
-        var target = $('#target_switch').val()
-        $(target).css("width", $('#control_width').val() + "%")
-    })
 })
